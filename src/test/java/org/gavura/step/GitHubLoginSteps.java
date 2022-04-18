@@ -13,9 +13,9 @@ import static org.hamcrest.Matchers.is;
 import static org.testng.Assert.assertTrue;
 
 public class GitHubLoginSteps {
-    private LoginPage loginPage;
-    private HomePage homePage;
-    private ProfileDropDownModule profileDropDownModule
+    private final LoginPage loginPage;
+    private final HomePage homePage;
+    private final ProfileDropDownModule profileDropDownModule;
 
     public GitHubLoginSteps(LoginPage loginPage, HomePage homePage, ProfileDropDownModule profileDropDownModule) {
         this.loginPage = loginPage;
