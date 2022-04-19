@@ -1,7 +1,7 @@
 package org.gavura.pageobject.page;
 
+import org.gavura.driver.LazyDriver;
 import org.gavura.pageobject.BasePage;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -13,7 +13,7 @@ public class LoginPage extends BasePage {
     @FindBy(name = "commit")
     private WebElement signInButton;
 
-    public LoginPage(WebDriver driver) {
+    public LoginPage(LazyDriver driver) {
         super(driver);
     }
 

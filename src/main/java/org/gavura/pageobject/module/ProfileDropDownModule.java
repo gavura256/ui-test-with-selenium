@@ -1,12 +1,12 @@
 package org.gavura.pageobject.module;
 
+import org.gavura.driver.LazyDriver;
 import org.gavura.pageobject.BasePage;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class ProfileDropDownModule extends BasePage {
-    public ProfileDropDownModule(WebDriver driver) {
+    public ProfileDropDownModule(LazyDriver driver) {
         super(driver);
     }
 
@@ -14,6 +14,6 @@ public class ProfileDropDownModule extends BasePage {
     private WebElement profileName;
 
     public String getProfileName() {
-        return profileName.getText();
+        return waitForElementVisible(profileName).getText();
     }
 }
