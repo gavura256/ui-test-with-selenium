@@ -1,6 +1,5 @@
 package org.gavura.pageobject;
 
-import io.cucumber.java.After;
 import org.gavura.driver.LazyDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -15,11 +14,6 @@ public class BasePage {
     public BasePage(LazyDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
-    }
-
-    @After
-    public void afterScenario() {
-        driver.dispose();
     }
 
     protected WebElement waitForElementClickable(WebElement element) {

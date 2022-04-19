@@ -45,5 +45,4 @@ public class GitHubLoginSteps {
 
         assertThat(gitHubProfileName, is(equalTo(userName)));
     }
-
 }

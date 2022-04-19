@@ -95,6 +95,7 @@ public class LazyDriver implements WebDriver, Disposable {
     @Override
     public void dispose() {
         if (webDriver != null) {
+            webDriver.close();
             webDriver.quit();
         }
     }
